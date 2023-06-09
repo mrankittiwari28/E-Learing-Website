@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>E-Learning Website</title>
+    <link rel="stylesheet" href="sync.css">
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to E-Learning</h1>
+        <nav>
+            <!-- Navigation links -->
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Assessments</a></li>
+                <li><a href="#">Uploads</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="signup">
+        <h2>Sign Up</h2>
+        <form>
+            <!-- Sign up form fields -->
+            <input type="text" name="name" placeholder="Name" class="input-field">
+            <input type="email" name="email" placeholder="Email" class="input-field">
+            <input type="password" name="password" placeholder="Password" class="input-field">
+            <button type="submit" class="btn-primary" onclick="myfunc()">Sign Up</button>
+        </form>
+    </section>
+
+    <section id="upload">
+        <h2>Upload Documents</h2>
+        <form>
+            <!-- File upload form -->
+            <input type="file" name="file" class="input-field">
+            <button type="submit" class="btn-primary">Upload</button>
+        </form>
+    </section>
+
+    <section id="assessments">
+        <h2>Online Assessments</h2>
+        <form>
+            <div class="question">
+                <h3>Question 1:</h3>
+                <p>What is the capital of France?</p>
+                <ul class="answer-options">
+                    <li>
+                        <input type="radio" name="question1" value="A">
+                        <label>A. London</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="question1" value="B">
+                        <label>B. Paris</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="question1" value="C">
+                        <label>C. Rome</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="question1" value="D">
+                        <label>D. Madrid</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="question">
+                <h3>Question 2:</h3>
+                <p>Which planet is known as the Red Planet?</p>
+                <ul class="answer-options">
+                    <li>
+                        <input type="radio" name="question2" value="A">
+                        <label>A. Venus</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="question2" value="B">
+                        <label>B. Mars</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="question2" value="C">
+                        <label>C. Jupiter</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="question2" value="D">
+                        <label>D. Saturn</label>
+                    </li>
+                </ul>
+            </div>
+            <!-- Add more questions here -->
+
+            <button type="submit" class="btn-primary" onclick="myfunc()">Submit</button>
+        </form>
+    </section>
+
+    <section id="future">
+        <h2>Future of E-Learning</h2>
+        <!-- Content about the future of e-learning -->
+        <p>E-learning is here to stay. As computer ownership grows across the globe e-learning becomes increasingly
+            viable and accessible. Internet connection speeds are increasing, and with that, opportunities for more
+            multimedia training methods arise.
+
+            With the immense improvement of mobile networks in the past few years and the increase in telecommuting,
+            taking all the awesome features of e-learning on the road is a reality with smartphones and other portable
+            devices. Technologies such as social media are also transforming education constantly.</p>
+    </section>
+
+    <section id="communication">
+        <div class="chat-container">
+            <div class="chat-header">
+                <h2>AI Chatbot</h2>
+            </div>
+            <div class="chat-body" id="chat-body">
+                <div class="chat-message bot">
+                    <p>Welcome! How can I assist you today? Ask course or enrollment process</p>
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="user-input" placeholder="Type your message...">
+                <button id="send-button">Send</button>
+            </div>
+        </div>
+    </section>
+    <section id="courses">
+        <h2>Available Courses</h2>
+        <div class="course">
+            <h3>Course 1: Introduction to Programming</h3>
+            <p>This course provides an introduction to programming concepts and languages. Topics covered include
+                variables, loops, conditionals, and basic algorithms.</p>
+            <button class="btn-primary enroll" onclick="myfunc()">Enroll</button>
+        </div>
+
+        <div class="course">
+            <h3>Course 2: Web Development Fundamentals</h3>
+            <p>In this course, you will learn the foundational skills required for web development. Topics covered
+                include HTML, CSS, and JavaScript.</p>
+            <button class="btn-primary enroll" onclick="myfunc()">Enroll</button>
+        </div>
+
+        <div class="course">
+            <h3>Course 3: Data Science for Beginners</h3>
+            <p>This course is designed for beginners interested in learning about data science. Topics covered include
+                data analysis, visualization, and introductory machine learning.</p>
+            <button class="btn-primary enroll" onclick="myfunc()">Enroll</button>
+        </div>
+        <div class="course">
+            <h3>Course 4: Android Development</h3>
+            <p>This course is designed for beginners interested in learning about android Development. Topics covered
+                include data analysis, visualization, and introductory icon formation.</p>
+            <button class="btn-primary enroll" onclick="myfunc()">Enroll</button>
+        </div>
+        <div class="course">
+            <h3>Course 5: Cloud Computing</h3>
+            <p>This course is designed for people interested in learning about cloud computing. Topics covered include
+                cloud analysis, visualization, and introductory bucket forming.</p>
+            <button class="btn-primary enroll" onclick="myfunc()">Enroll</button>
+        </div>
+
+        <!-- Add more courses here -->
+    </section>
+
+
+    <section id="admin-dashboard">
+        <h2>Admin Dashboard</h2>
+        <!-- Admin-specific content and controls -->
+        <div id="admin-panel">
+            <button class="btn-danger delete-course">Delete Course</button>
+            <button class="btn-primary manage-users" onclick="openPopup()">Manage Users</button>
+        </div>
+    </section>
+
+    <div id="popup" class="popup-container">
+        <div class="popup-content">
+            <h3>Manage Users</h3>
+            <p>Welcome to the User Management Panel.</p>
+            <p>If you don't have an account, you can sign up as a new user:</p>
+            <button class="btn-primary" onclick="signup()">Sign Up</button>
+            <p>If you already have an account, please select from the available options:</p>
+            <select id="user-select">
+                <option value="user1">User 1</option>
+                <option value="user2">User 2</option>
+                <option value="user3">User 3</option>
+            </select>
+            <button class="btn-primary" onclick="selectUser()">Select User</button>
+            <button class="btn-primary" onclick="closePopup()">Close</button>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <p>© 2023 E-Learning Website. All rights reserved.</p>
+    </footer>
+
+    <script src="sync.js"></script>
+</body>
+
+</html>
